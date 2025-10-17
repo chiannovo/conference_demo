@@ -1,0 +1,5 @@
+ https://chechia.net/slides/2025-10-15-hello-dev-rag/#/2
+ 原始碼
+ https://github.com/chechiachang/rag-workshop
+ 講師資訊
+ https://chechia.net/

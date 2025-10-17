@@ -1,0 +1,20 @@
+prompt(課程中的prompt格式有拍照)
+- 目的背景
+- 功能描述
+↓
+- 功能修改&調整
+- 必須有自己的想法(明確條列)
+
+tips:
+1. 直接給喜歡的前端item樣式網址(free fronted這類網址)，讓他參考樣式修改
+2. 前端修改時可以透過F12點選物件把物件名稱複製給他讓他精準定位
+
+github 靜態網站
+- repos 必須為Public 
+
+模擬數據生成
+- MVP等級的可以用json型態的範例資料就好
+
+思考:
+- azure devops模擬github靜態網頁功能(fine tune: live sever, deploy: CICD+pipeline)
+- 發布前要檢查相關安全設定 

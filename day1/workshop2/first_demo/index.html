@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智慧家庭電器儀表板</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- 標題區域 -->
+        <header class="dashboard-header">
+            <h1>智慧家庭電器儀表板</h1>
+            <div class="current-time" id="currentTime"></div>
+        </header>
+
+        <!-- 主要內容區域 -->
+        <main class="dashboard-main">
+            <!-- 智慧家電狀態區域 -->
+            <section class="appliances-section">
+                <h2>智慧家電狀態</h2>
+                <div class="appliances-grid">
+                    <div class="appliance-card" data-appliance="air-conditioner">
+                        <div class="appliance-icon">❄️</div>
+                        <h3>冷氣</h3>
+                        <div class="appliance-status">
+                            <span class="status-indicator" id="ac-status"></span>
+                            <span class="status-text" id="ac-text">關閉</span>
+                        </div>
+                        <div class="appliance-power" id="ac-power">0W</div>
+                        <button class="toggle-btn" id="ac-toggle">開啟</button>
+                    </div>
+
+                    <div class="appliance-card" data-appliance="light">
+                        <div class="appliance-icon">💡</div>
+                        <h3>燈光</h3>
+                        <div class="appliance-status">
+                            <span class="status-indicator" id="light-status"></span>
+                            <span class="status-text" id="light-text">關閉</span>
+                        </div>
+                        <div class="appliance-power" id="light-power">0W</div>
+                        <button class="toggle-btn" id="light-toggle">開啟</button>
+                    </div>
+
+                    <div class="appliance-card" data-appliance="tv">
+                        <div class="appliance-icon">📺</div>
+                        <h3>電視</h3>
+                        <div class="appliance-status">
+                            <span class="status-indicator" id="tv-status"></span>
+                            <span class="status-text" id="tv-text">關閉</span>
+                        </div>
+                        <div class="appliance-power" id="tv-power">0W</div>
+                        <button class="toggle-btn" id="tv-toggle">開啟</button>
+                    </div>
+
+                    <div class="appliance-card" data-appliance="refrigerator">
+                        <div class="appliance-icon">🧊</div>
+                        <h3>冰箱</h3>
+                        <div class="appliance-status">
+                            <span class="status-indicator" id="fridge-status"></span>
+                            <span class="status-text" id="fridge-text">開啟</span>
+                        </div>
+                        <div class="appliance-power" id="fridge-power">150W</div>
+                        <button class="toggle-btn active" id="fridge-toggle">關閉</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 用電量統計區域 -->
+            <section class="power-stats-section">
+                <h2>用電量統計</h2>
+                <div class="stats-controls">
+                    <button class="period-btn active" id="weekly-btn">本週</button>
+                    <button class="period-btn" id="monthly-btn">本月</button>
+                </div>
+                <div class="power-chart-container">
+                    <div id="powerChart"></div>
+                </div>
+            </section>
+
+            <!-- 分析數據區域 -->
+            <section class="analytics-section">
+                <div class="analytics-card">
+                    <h3>最高用電時段</h3>
+                    <div class="analytics-content">
+                        <div class="time-display" id="peak-time">19:00-21:00</div>
+                        <div class="time-description">今日用電高峰</div>
+                    </div>
+                </div>
+
+                <div class="analytics-card">
+                    <h3>最高耗電家電</h3>
+                    <div class="analytics-content">
+                        <div class="appliance-name" id="highest-consumer">冷氣</div>
+                        <div class="power-consumption" id="highest-power">850W</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
